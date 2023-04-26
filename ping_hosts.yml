@@ -1,0 +1,12 @@
+---
+
+- name: this is just a test
+  hosts: all
+  gather_facts: true
+  tasks:
+
+  - name: ping test win python ping
+    ping:
+
+  - name: test connection with win_ping
+    ansible.windows.win_ping:
