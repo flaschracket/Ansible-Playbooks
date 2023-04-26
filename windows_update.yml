@@ -1,8 +1,6 @@
 ---
 - name: Windows update
-  #hosts: FAR-WindowsServer
   hosts: all
-  #become: yes
   tasks:
     - name: Get whoami information
       ansible.windows.win_whoami:
