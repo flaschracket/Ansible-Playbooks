@@ -1,0 +1,12 @@
+---
+- name: this is just a test playbook to make sure powershell works
+  hosts: all
+  gather_facts: true
+  tasks:
+
+- name: Ensure that system32 and Powershell are present on the global system path, and in the specified order
+  ansible.windows.win_path:
+    elements:
+    - '%SystemRoot%\system32'
+    - '%SystemRoot%\system32\WindowsPowerShell\v1.0'
+    
